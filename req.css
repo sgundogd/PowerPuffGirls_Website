@@ -1,0 +1,113 @@
+/* Genel Stil */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Hafif gri */
+    color: #333;
+    overflow-x: hidden; /* Yatay kaydırmayı önle */
+}
+
+.background-video-container {
+    position: fixed; /* Sayfayı tamamen kaplamak için sabitle */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Tüm ekran yüksekliğini kapla */
+    z-index: 0; /* İçeriğin altında kalır */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Videoyu tamamen kapla */
+    opacity: 0.08; /* Şeffaflık */
+}
+
+/* Beyaz İçerik Kutusu */
+.content {
+    position: relative; /* İçerik kutusunu üstte tut */
+    padding: 3rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.95); /* Hafif şeffaf beyaz */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Videonun üstünde kalır */
+}
+/* Navbar */
+.navbar {
+    background: #333333ca;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: url('logo.webp') no-repeat center/cover;
+    border-radius: 50%;
+    border: 3px solid #5D26C1;
+    box-shadow: 0px 4px 15px rgba(225, 225, 225, 0.5);
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-buttons a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar-buttons a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* İçerik Alanı */
+
+
+/* Ana Başlık */
+.content h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Araştırma Sorusu ve Açıklama */
+.research-question, .research-explanation {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(93, 38, 193, 0.05);
+    border-radius: 10px;
+}
+
+.research-question h2, .research-explanation h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.research-question p, .research-explanation p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}

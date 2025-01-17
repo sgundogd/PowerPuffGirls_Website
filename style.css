@@ -1,0 +1,98 @@
+/* Genel stil */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.content {
+    position: relative; /* Video ve yazı üst üste gelsin */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* İçeriği üstte hizala */
+    height: 100vh; /* Tüm ekran yüksekliği */
+    overflow: hidden;
+    padding-top: 3rem; /* Yukarıda biraz boşluk bırak */
+}
+
+/* Video Stili */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video ekranı tamamen doldurur */
+    z-index: -1; /* Video arkada kalsın */
+}
+
+/* Başlık ve Buton Konteyneri */
+.header-container {
+    display: flex;
+    flex-direction: column; /* Başlık ve butonlar dikeyde hizalanır */
+    align-items: center; /* Tüm elemanlar yatayda ortalanır */
+    gap: 1rem; /* Başlık ve butonlar arasında boşluk */
+}
+
+/* Başlık Arka Planı */
+.title-background {
+    background-color: rgba(128, 128, 128, 0.5); /* Şeffaf siyah arka plan */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: inline-block; /* Başlığı sıkıştır */
+}
+
+.title-background h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: white; /* Yazı beyaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Okunabilirlik için gölge */
+}
+
+/* Buton Konteyneri */
+.button-container {
+    display: flex; /* Butonları yan yana hizala */
+    gap: 1rem; /* Butonlar arasında boşluk bırak */
+}
+
+/* Buton Arka Planları */
+.button-background {
+    background-color: rgba(128, 128, 128, 0.5); /* Butonların arka planı */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center; /* İçerikleri ortala */
+    transition: all 0.3s ease;
+}
+
+.button-background:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Hover efektiyle daha koyu arka plan */
+}
+
+/* Buton Stili */
+.button {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Beyaz yazı */
+    transition: color 0.3s ease;
+}
+
+.button:hover {
+    color: #ff8cb5; /* Hover efekti */
+}
+
+/* Footer Stili */
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Hafif şeffaf siyah arka plan */
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif';
+    padding: 0.2rem 0.5rem; /* Yazıya yakın arka plan */
+    border-radius: 5px 0 0 0; /* Sadece sol üst köşeyi yuvarlat */
+    text-align: right;
+}
