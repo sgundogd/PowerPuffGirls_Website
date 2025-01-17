@@ -54,7 +54,7 @@ html, body {
 .logo {
     width: 60px;
     height: 60px;
-    background: url('logo.webp') no-repeat center/cover;
+    background: url('../media/logo.webp') no-repeat center/cover;
     border-radius: 50%;
     border: 3px solid #5D26C1;
     box-shadow: 0px 4px 15px rgba(225, 225, 225, 0.5);

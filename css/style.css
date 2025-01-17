@@ -91,7 +91,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.3); /* Hafif şeffaf siyah arka plan */
     color: white;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif';
+    font-family: 'Poppins', sans-serif;
     padding: 0.2rem 0.5rem; /* Yazıya yakın arka plan */
     border-radius: 5px 0 0 0; /* Sadece sol üst köşeyi yuvarlat */
     text-align: right;
