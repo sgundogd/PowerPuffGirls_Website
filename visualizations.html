@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="css/other_page_style.css">
 </head>
 <body>
-    <!-- Video Arka Plan -->
     <div class="background-video-container">
         <video autoplay muted loop class="background-video">
             <source src="media/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Tarayıcınız video oynatmayı desteklemiyor.
         </video>
     </div>
 
-    <!-- Navbar -->
     <div class="navbar">
         <a href="index.html" class="logo"></a>
         <div class="navbar-buttons">
@@ -25,37 +23,109 @@
             <a href="visualizations.html" class="active">Visualizations</a>
         </div>
     </div>
-
-    <!-- İçerik -->
     <div class="content">
         <h1>Visualizations</h1>
-
-        <!-- Grafik Alanı -->
-        <div class="visualizations-container">
-            <!-- Grafik 1 -->
-            <div class="visualization">
-                <h2>Visualization 1</h2>
-                <img src="graph1.png" alt="Graph 1" class="visualization-image">
-            </div>
-
-            <!-- Grafik 2 -->
-            <div class="visualization">
-                <h2>Visualization 2</h2>
-                <img src="graph2.png" alt="Graph 2" class="visualization-image">
-            </div>
-
-            <!-- Grafik 3 -->
-            <div class="visualization">
-                <h2>Visualization 3</h2>
-                <img src="graph3.png" alt="Graph 3" class="visualization-image">
-            </div>
-
-            <!-- Grafik 4 -->
-            <div class="visualization">
-                <h2>Visualization 4</h2>
-                <img src="graph4.png" alt="Graph 4" class="visualization-image">
-            </div>
+        <h2>What If All Vehicles Were Electric?</h2>
+        <div class="description-container">
+            <p>In today’s cities, increasing population and urbanization have become one of the main sources of environmental 
+                problems. Particularly in major cities like Istanbul, heavy vehicle traffic plays a critical role in the rise of 
+                carbon emissions and air pollution. This project aims to gain a deeper understanding of the environmental impact of
+                the transportation sector. Our project will compare the annual carbon emissions of electric and conventional 
+                vehicles to evaluate what kind of transformation is needed for a more sustainable transportation model.</p>
         </div>
+
+        <section class="descriptive-visualizations">
+            <h2>Descriptive Visualizations</h2>
+
+            <div class="visualization">
+                <img src="media/graph1.png" alt="Carbon Emissions Vehicle Yearly" class="visualization-image small-graph" onclick="openModal(this)">
+            </div>
+            <div class="description-container">
+                <p>The graph shows the annual carbon emissions for different fuel types. 
+                    Gasoline vehicles have the highest emissions (2772 kg), while electric vehicles have the lowest 
+                    emissions (1865.85 kg). Electric vehicles do not produce direct carbon dioxide emissions; the emissions 
+                    result from the electricity generation process used to charge the vehicles.</p>
+            </div>
+
+            <div class="visualization">
+                <img src="media/graph2.png" alt="Carbon Emission Comparison" class="visualization-image small-graph" onclick="openModal(this)">
+            </div>
+            <div class="description-container">
+                <p>We know that the indirect carbon dioxide emissions of electric vehicles are lower than the emissions 
+                    from other vehicles' fuel consumption. The graph shows how carbon dioxide emissions would change over 
+                    the years if all cars in traffic were electric. As a result, it has been observed that switching to electric 
+                    vehicles can reduce carbon dioxide emissions by approximately 24% each year. Looking at the past 20 years, 
+                    it is evident that transitioning to all-electric vehicles could significantly reduce emissions.</p>
+            </div>
+
+            <div class="visualization-row">
+                <div class="visualization">
+                    <img src="media/graph3.png" alt="Electric Vehicle Number In Years" class="visualization-image" onclick="openModal(this)">
+                </div>
+                <div class="visualization">
+                    <img src="media/graph4.png" alt="Non-electric Vehicle Number In Years" class="visualization-image" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="description-container">
+                <p>This graph is showing the predictions for future years vehicle number. 
+                    The numbers of electric and non-electric vehicles were modeled using linear regression based on real 
+                    data. The dashed lines represents the predictions for future years made using this model.
+                </p>
+            </div>
+
+            <div class="description-container">
+                <p>The number of non-electric vehicles continues to increase, which may 
+                    worsen environmental problems. On the other hand, the rapid growth in the number of electric vehicles 
+                    indicates an acceleration in the transition to clean energy. The increasing adoption of electric vehicles 
+                    is critically important for reducing the environmental impacts of fossil-fueled vehicles.
+                </p>
+            </div>
+        </section>
+
+        <section class="model-based-visualization">
+            <h2>Model-Based Visualization</h2>
+            <div class="visualization">
+                <iframe src="media/interactive_graph.html" class="interactive-frame" title="Interactive Graph"></iframe>
+            </div>
+
+            <div class="description-container">
+                <p>This graph illustrates the changes in carbon emissions over the 
+                    years according to vehicle fuel types. Darker colours represent higher emissions, while 
+                    lighter colours indicate lower emissions. </p>
+            </div>
+
+            <div class="description-container">
+                <p>The increase in the use of electric vehicles is a sign of the 
+                    growing preference for environmentally friendly choices. However, it is notable 
+                    that while the number of diesel vehicles with lower carbon emissions has decreased in recent 
+                    years, the number of gasoline vehicles with the highest carbon emissions has increased. 
+                    This highlights that despite the rise in environmentally conscious choices, the increase in 
+                    the number of high carbon-emission vehicles continues to have a negative impact on the environment.</p>
+            </div>
+            <div class="description-container">
+                <p>In conclusion, electric vehicles clearly demonstrate significant advantages in reducing carbon emissions compared to 
+                    fossil fuel-powered vehicles. The increasing adoption of electric vehicles signifies a positive shift towards 
+                    more environmentally friendly transportation options, although the rising number of high-emission gasoline vehicles 
+                    remains a notable concern.
+                </p>
+            </div>
+            <div class="description-container">
+                <p>To achieve substantial reductions in carbon emissions, 
+                    it is essential to gradually phase out high-emission vehicles and 
+                    support the development of sustainable transportation infrastructure. Additionally, 
+                    when electricity is generated from renewable energy sources, the indirect emissions associated 
+                    with electric vehicles can also be significantly minimized. This transition will play a vital role in 
+                    combating climate change and preserving environmental health for future generations.
+                </p>
+            </div>
+        </section>
     </div>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
